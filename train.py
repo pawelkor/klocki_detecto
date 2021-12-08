@@ -5,18 +5,22 @@ from object_detection.utils import label_map_util  # part of tensorflow?
 import pandas as pd
 import numpy as np
 import os, sys
-expt_name = sys.argv[1]
-expt_dir = 'experiments/' + expt_name
-if os.path.isdir(expt_dir):
-    print("Experiment already exists.")
-    exit(1)
-else: os.mkdir(expt_dir)
 klocki_home = os.path.expanduser('~/klocki/')
-dataset_dir = 'data/' + sys.argv[2]
-ann_file = dataset_dir + '/' + sys.argv[2] + '.annotations.csv'
-f_file = dataset_dir + '/' + sys.argv[2] + '.files.csv'
+expt_name = sys.argv[1]
+expt_dir = klocki_home + 'experiments/' + expt_name
+if os.path.isdir(expt_dir):
+    if '-o' in sys.argv:
+        os.rmdir(expt_dir)
+    else:
+        print("Experiment already exists.")
+        exit(1)
+os.mkdir(expt_dir)
+dataset_dir = klocki_home + 'data/' + sys.argv[2] + '/' + sys.argv[3]
+ann_file = dataset_dir + '.annotations.csv'
+f_file = dataset_dir + '.files.csv'
 label_file = klocki_home + 'data/label_map.pbtxt'
 # end of 'params'
+
 label_map = label_map_util.get_label_map_dict(label_map_util.load_labelmap(label_file))
 # xml_to_csv(dataset_dir, ann_file)
 df = pd.read_csv(ann_file).astype(str)
