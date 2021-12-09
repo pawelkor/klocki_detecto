@@ -14,7 +14,7 @@ pred_file = expt_dir + '/inferences/' + src + '.csv'
 src = pp + '/' + src
 src_dir = klocki_home + 'data/' + src
 recursive = False
-model_file = 'experiments/' + expt_dir + '/' + expt_dir + '.pth'
+model_file = 'experiments/' + expt_dir + '/model.pth'
 label_file = klocki_home + 'data/label_map.pbtxt'
 # end of 'params'
 

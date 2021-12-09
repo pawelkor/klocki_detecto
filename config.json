@@ -1,0 +1,11 @@
+{
+  "PP": ["sliced_size750_30_80_4classes"],
+  "__EVAL_PP_MAP": {
+    "sliced_size750_30_80": "sliced_size750_30_80_4classes"
+  },
+  "BATCH": ["fb_I22_I6"],
+  "__": [ "sliced_size750_30_80_4classes","2sourcesI6", "2sourcesI22","ssd320_05K_01K","2sources", "first_batch", "only_kaggle", "Brick","9sources","4sources2","7sources", "8sources", "kaggle_lego_vs_bricks","sliced_size750_30_80","2sourcesK2","first_batch2","3sources3", "4sources",
+  "ssd320_05K_01K","ssd_mobilenet_v2_320x320_coco17_tpu-8","ssd320_05K_02K","ssd320_10K_00_4K","ssd320_20K_04K","fb_I22_I6","ssd320_05K_00_5K","ssd320","ssd640_25K_02K","ssd320_25K_02K"],
+  "TEMPLATE": ["PT1"],
+  "SOURCE": ["1kolor_3", "fotki_jasia4"]
+}
